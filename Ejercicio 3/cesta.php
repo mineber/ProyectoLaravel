@@ -6,6 +6,7 @@ if (!isset($_SESSION['productos'])) {
 if (isset($_REQUEST['reiniciar'])) {
     $_SESSION['carrito'] = [];
     header("Location: index.php");
+    echo "";
 }
 if (!isset($_SESSION['carrito'])) {
     $_SESSION['carrito'] = isset($_COOKIE['carrito']) ? unserialize(base64_decode($_COOKIE['carrito'])) : [];
