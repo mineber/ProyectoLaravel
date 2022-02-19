@@ -15,14 +15,14 @@ class Juegos extends Migration
     {
        
         Schema::create('juegos', function(Blueprint $table){
-            $table->string('cod_juego');
+            $table->increments('cod_juego');
             $table->string('nombre_juego');
-            $table->primary('cod_juego');
             $table->string('plataforma');
+            $table->string('descripcion');
             $table->integer('precio');
             $table->string('imagen');
             $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

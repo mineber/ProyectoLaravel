@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\JuegosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', CarritoController::class);
-
+Route::get('juegos', [JuegosController::class, 'index']);
