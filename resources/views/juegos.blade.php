@@ -1,5 +1,5 @@
 @extends('layouts.plantilla')
-
+<script src="https://cdn.tailwindcss.com"></script>
 @section('title', 'Juegos')
 @section('content')
 <style>
