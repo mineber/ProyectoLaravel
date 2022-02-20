@@ -197,5 +197,5 @@ class DatabaseSeeder extends Seeder
         $juego11->imagen = "pokemonluna.png";
         $juego11->user_id = 1;
         $juego11->save();
-     }
+    }
 }
