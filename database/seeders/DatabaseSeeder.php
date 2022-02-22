@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         $user->telefono = 633163586;
         $user->contraseña = "soyadmin";
         $user->save();
-
+        
         $juego = new juegos();
         $juego->nombre_juego = "Pokemon Luna";
         $juego->plataforma = "Nintendo 3ds";
