@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\JuegosController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('juegos', [JuegosController::class, 'index']);
+Route::get('', [JuegosController::class, 'index'])->name('inicio');
+Route::get('login', [LoginController::class, 'index'])->name('login');
+Route::get('juegos', [JuegosController::class, 'index'])->name('juegos');

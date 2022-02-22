@@ -9,8 +9,9 @@ use Juegos;
 class JuegosController extends Controller
 {
     public function index(){
-        $juegos = ModelsJuegos::paginate();
-        return view('juegos', compact('juegos'));
+        $juegos = ModelsJuegos::paginate(6);
+        //compact manda la variable juegos
+        return view('inicio', compact('juegos'));
     }
     public function create(){
         return "crear";
