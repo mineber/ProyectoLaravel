@@ -9,10 +9,11 @@
             <div class="card-juego">
                 <img src="{{asset('img/'.$juego->imagen)}}" alt="">
                 <div class="cuerpo-card">
-                    <a href="">{{$juego->nombre_juego}}</a><br> 
+                    <a href="">{{$juego->nombre_juego}}</a>
+                    <p>Vendedor: </p>
                     {{substr($juego->descripcion, 0, 20)}}
                     <p>Precio: {{$juego->precio}} €</p>
-                    <a href="#" class="btn btn-primary mt-4">Buy</a>
+                    <a href="#" class="boton-comprar">comprar</a>
                 </div>
             </div>
             @endforeach
