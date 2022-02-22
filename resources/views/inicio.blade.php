@@ -3,8 +3,8 @@
 @section('title', 'juegos')
 @section('content')
 
+<h1 class="titulo-juegos">Juegos más recientes</h1>
 <div class="div-juegos">
-    {{-- <h2>Juegos más recientes</h2> --}}
             @foreach($juegos as $juego)
             <div class="card-juego">
                 <img src="{{asset('img/'.$juego->imagen)}}" alt="">
@@ -16,8 +16,6 @@
                 </div>
             </div>
             @endforeach
-<div class="paginacion">{{$juegos->links()}}</div>  
-
 </div>
-
+<div class="paginacion">{{$juegos->links()}}</div>  
 @endsection

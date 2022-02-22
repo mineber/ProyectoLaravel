@@ -22,6 +22,8 @@ img {
 body {
     width: calc(100vw - 1.1rem);
     background-image: url(../img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -81,9 +83,8 @@ main {
     height: auto;
     width: 100%;
     align-items: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .hero {
@@ -130,12 +131,21 @@ h2 {
 
 /*MAIN div juegos inicio*/
 
+.titulo-juegos {
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+}
+
 .div-juegos {
+    margin: 2rem 0 2rem 0;
     width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -147,14 +157,17 @@ h2 {
     background-color: aliceblue;
 }
 
-
-/* .paginacion {} */
+.paginacion {
+    margin: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 
 /*FOOTER*/
 
 footer {
-    position: fixed;
     bottom: 0;
     padding: 1.5rem 8rem 1.5rem 8rem;
     width: 100%;
