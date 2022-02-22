@@ -49,7 +49,7 @@ class DatabaseSeeder extends Seeder
         $juego2->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
         $juego2->plataforma = "PS3";
         $juego2->precio = 30;
-        $juego2->imagen = "BO2.png";
+        $juego2->imagen = "ndogs.png";
         $juego2->user_id = 2;
         $juego2->save();
         
@@ -77,7 +77,7 @@ class DatabaseSeeder extends Seeder
         $juego4->plataforma = "Nintendo Switch";
         $juego4->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
         $juego4->precio = 60;
-        $juego4->imagen = "pla.png";
+        $juego4->imagen = "pokemonluna.png";
         $juego4->user_id = 1;
         $juego4->save();
 

@@ -9,7 +9,7 @@ use Juegos;
 class JuegosController extends Controller
 {
     public function index(){
-        $juegos = ModelsJuegos::paginate(6);
+        $juegos = ModelsJuegos::simplePaginate(6);
         //compact manda la variable juegos
         return view('inicio', compact('juegos'));
     }
