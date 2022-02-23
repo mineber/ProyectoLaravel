@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\JuegosController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PlataformaController;
 use App\Http\Controllers\RegistroController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,5 +19,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('', [JuegosController::class, 'index'])->name('inicio');
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::get('juegos', [JuegosController::class, 'index'])->name('juegos');
+Route::post('login',[LoginController::class, 'log'])->name('login.n');
 Route::get('registro', [RegistroController::class, 'index'])->name('registro');
-Route::get('plataforma/{nombre_plataforma}', [PlataformaController::class, 'index'])->name('plataforma');

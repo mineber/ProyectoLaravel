@@ -17,8 +17,8 @@ class LoginController extends Controller
         if(!isset($user->id)){
             return redirect('login');
         } else {
-            setcookie("user", $user->nombre_usuario, time() + 100*24*3600);
-            return redirect('..');
+            
+            return redirect('');
         }
     }
 }

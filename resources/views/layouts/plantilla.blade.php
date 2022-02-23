@@ -16,12 +16,9 @@
     <header>
         <div class="banner-left">
             <a href="{{route('inicio')}}" class="caja">Página de inicio</a>
-            {{-- <a href="#" class="caja">Videojuegos</a>
-            <a href="#" class="caja">Plataformas</a> --}}
-            <a href="{{route('plataforma','Nintendo')}}" class="caja">Nintendo</a>
-            <a href="{{route('plataforma','XBOX')}}" class="caja">XBOX</a>
-            <a href="{{route('plataforma','Playstation')}}" class="caja">Playstation</a>
-            <a href="{{route('plataforma','pc')}}" class="caja">PC</a>
+            <a href="index.php" class="caja">Videojuegos</a>
+            <a href="index.php" class="caja">Subscripciones</a>
+            <a href="index.php" class="caja">Sagas</a>
         </div>
         
         <div class="banner-right">
