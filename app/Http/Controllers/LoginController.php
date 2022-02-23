@@ -13,7 +13,7 @@ class LoginController extends Controller
         // return redirect()->view('inicio');
     } 
     public function log(request $datos){
-        $user = users::where('nombre_usuario', '=', $datos->nombre_usuario)->where('contraseña', '=', $datos->contraseña)->first();
+        $user = users::where(strtoupper('nombre_usuario'), '=', strtoupper($datos->nombre_usuario))->where('contraseña', '=', $datos->contraseña)->first();
         if(!isset($user->id)){
             return redirect('login');
         } else {
