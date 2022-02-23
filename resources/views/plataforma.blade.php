@@ -1,11 +1,11 @@
 @extends('layouts.plantillaJuegos')
 <script src="https://cdn.tailwindcss.com"></script>
-@section('title', 'juegos')
+@section('title', 'plataformas')
 @section('content')
 
-<h1 class="titulo-juegos">Juegos más recientes</h1>
+<h1 class="titulo-juegos">Juegos  {{$nombre_plataforma}}</h1>
 <div class="div-juegos">
-            @foreach($juegos as $juego)
+            @foreach($plataforma as $juego)
             <div class="card-juego">
                 <img src="{{asset('img/'.$juego->imagen)}}" alt="">
                 <div class="cuerpo-card">
@@ -18,5 +18,5 @@
             </div>
             @endforeach
 </div>
-<div class="paginacion">{{$juegos->links()}}</div>  
+<div class="paginacion">{{$plataforma->links()}}</div>  
 @endsection
