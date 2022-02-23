@@ -77,7 +77,7 @@ class DatabaseSeeder extends Seeder
         $juego4->plataforma = "Nintendo";
         $juego4->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
         $juego4->precio = 60;
-        $juego4->imagen = "pokemonluna.png";
+        $juego4->imagen = "PLA.jpg";
         $juego4->user_id = 1;
         $juego4->save();
 
