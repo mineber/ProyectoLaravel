@@ -16,7 +16,7 @@
     <header>
         <div class="banner-left">
             <a href="{{route('inicio')}}" class="caja">Página de inicio</a>
-            <a href="index.php" class="caja">Videojuegos</a>
+            <a href="{{route('Nintendo')}}" class="caja">Plataformas</a>
             <a href="index.php" class="caja">Subscripciones</a>
             <a href="index.php" class="caja">Sagas</a>
         </div>
