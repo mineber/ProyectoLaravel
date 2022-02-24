@@ -20,11 +20,19 @@
             <a href="index.php" class="caja">Subscripciones</a>
             <a href="index.php" class="caja">Sagas</a>
         </div>
-        
+           @if (isset($_SESSION['usuario']))
+           <div class="banner-right">
+            <a href="{{route('login')}}" class="caja IS">{{$_SESSION['usuario']}}</a>
+            <a href="{{route('cs')}}" class="caja IS">Cerrar Sesión</a>
+            <a href="#" class="caja CC">Carro</a> 
+                      
+        </div>
+        @else
         <div class="banner-right">
             <a href="{{route('login')}}" class="caja IS">Inicia sesión</a>
             <a href="#" class="caja CC">Crear cuenta</a>            
         </div>
+            @endif
     </header>
     <main>
         @yield('content')

@@ -10,6 +10,7 @@ use Juegos;
 class JuegosController extends Controller
 {
     public function index(){
+        session_start();
         $juegos = ModelsJuegos::simplePaginate(6);
         $users = users::all();
         

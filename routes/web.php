@@ -19,5 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('', [JuegosController::class, 'index'])->name('inicio');
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::get('juegos', [JuegosController::class, 'index'])->name('juegos');
+Route::get('cs', [LoginController::class, 'cs'])->name('cs');
 Route::post('login',[LoginController::class, 'log'])->name('login.n');
 Route::get('registro', [RegistroController::class, 'index'])->name('registro');
