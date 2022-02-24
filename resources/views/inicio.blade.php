@@ -15,7 +15,6 @@
                             {{$user->nombre_usuario}}
                         @endif
                     @endforeach</p>
-                     
                     {{substr($juego->descripcion, 0, 20)}}
                     <p>Precio: {{$juego->precio}} €</p>
                     <a href="#" class="boton-comprar">comprar</a>
