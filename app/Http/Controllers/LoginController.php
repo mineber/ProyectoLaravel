@@ -31,4 +31,17 @@ class LoginController extends Controller
             return redirect('');
         }
     }
+    public function register(request $datos){
+        $user = new users;
+        $user->nombre_usuario = $datos->nombre_usuario;
+        $user->name = $datos->name;
+        $user->fecha_nac = $datos->fecha_nac;
+        $user->direccion = $datos->direccion;
+        $user->telefono = $datos->telefono;
+        $user->contraseña = $datos->contraseña;
+        $user->save();
+        
+            return redirect('')->with("echo '<script language='javascript'>alert('Cuenta registrada, inicia sesión');</script>';");
+        
+    }
 }
