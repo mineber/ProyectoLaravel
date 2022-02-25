@@ -14,8 +14,6 @@
     <header>
     <div class="banner-left">
             <a href="{{route('inicio')}}" class="caja">Inicio</a>
-            {{-- <a href="#" class="caja">Videojuegos</a>
-            <a href="#" class="caja">Plataformas</a> --}}
             <a href="{{route('plataforma','Nintendo')}}" class="caja">Nintendo</a>
             <a href="{{route('plataforma','XBOX')}}" class="caja">XBOX</a>
             <a href="{{route('plataforma','Playstation')}}" class="caja">Playstation</a>
@@ -30,7 +28,7 @@
             @else
         <div class="banner-right">
             <a href="{{route('login')}}" class="caja IS">Login</a>
-            <a href="#" class="caja CC">Registrarse</a>            
+            <a href="{{route('registro')}}" class="caja CC">Registrarse</a>            
         </div>
             @endif
     </header>
