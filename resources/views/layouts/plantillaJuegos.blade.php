@@ -14,12 +14,14 @@
 
 <body>
     <header>
-        <div class="banner-left">
-            <a href="{{route('inicio')}}" class="caja">Página de inicio</a>            
-            
-            <a href="{{route('Nintendo')}}" class="caja">Plataformas</a>
-            <a href="index.php" class="caja">Subscripciones</a>
-            <a href="index.php" class="caja">Sagas</a>
+    <div class="banner-left">
+            <a href="{{route('inicio')}}" class="caja">Página de inicio</a>
+            {{-- <a href="#" class="caja">Videojuegos</a>
+            <a href="#" class="caja">Plataformas</a> --}}
+            <a href="{{route('plataforma','Nintendo')}}" class="caja">Nintendo</a>
+            <a href="{{route('plataforma','XBOX')}}" class="caja">XBOX</a>
+            <a href="{{route('plataforma','Playstation')}}" class="caja">Playstation</a>
+            <a href="{{route('plataforma','pc')}}" class="caja">PC</a>
         </div>
         @if (isset($_SESSION['usuario']))
            <div class="banner-right">

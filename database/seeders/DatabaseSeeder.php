@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
         
         $juego = new juegos();
         $juego->nombre_juego = "Pokemon Luna";
-        $juego->plataforma = "Nintendo 3ds";
+        $juego->plataforma = "Nintendo";
         $juego->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
         $juego->precio = 20;
         $juego->imagen = "pokemonluna.png";
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
         $juego2 = new juegos();
         $juego2->nombre_juego = "Call of duty Black Ops 2";
         $juego2->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
-        $juego2->plataforma = "PS3";
+        $juego2->plataforma = "Playstation";
         $juego2->precio = 30;
         $juego2->imagen = "Black ops 2.jpg";
         $juego2->user_id = 2;
@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
 
         $juego3 = new juegos();
         $juego3->nombre_juego = "Nintendogs";
-        $juego3->plataforma = "Nintendo 3ds";
+        $juego3->plataforma = "Nintendo";
         $juego3->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
         $juego3->precio = 10;
         $juego3->imagen = "ndogs.png";
@@ -74,7 +74,7 @@ class DatabaseSeeder extends Seeder
 
         $juego4 = new juegos();
         $juego4->nombre_juego = "Pokemon Legends Arceus";
-        $juego4->plataforma = "Nintendo Switch";
+        $juego4->plataforma = "Nintendo";
         $juego4->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
         $juego4->precio = 60;
         $juego4->imagen = "PLA.jpg";
@@ -83,11 +83,38 @@ class DatabaseSeeder extends Seeder
 
         $juego5 = new juegos();
         $juego5->nombre_juego = "Minecraft";
-        $juego5->plataforma = "Xbox 360";
+        $juego5->plataforma = "XBOX";
         $juego5->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
         $juego5->precio = 15;
         $juego5->imagen = "minecraft.png";
         $juego5->user_id = 1;
+        $juego5->save();
+
+        $juego5 = new juegos();
+        $juego5->nombre_juego = "Minecraft";
+        $juego5->plataforma = "XBOX";
+        $juego5->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
+        $juego5->precio = 15;
+        $juego5->imagen = "minecraft.png";
+        $juego5->user_id = 2;
+        $juego5->save();
+
+        $juego5 = new juegos();
+        $juego5->nombre_juego = "Minecraft";
+        $juego5->plataforma = "XBOX";
+        $juego5->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
+        $juego5->precio = 15;
+        $juego5->imagen = "minecraft.png";
+        $juego5->user_id = 2;
+        $juego5->save();
+
+        $juego5 = new juegos();
+        $juego5->nombre_juego = "Minecraft";
+        $juego5->plataforma = "XBOX";
+        $juego5->descripcion = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, nam fugit cum illum ea doloremque, optio exercitationem modi inventore quisquam vel quas. Aliquid, nihil! Expedita voluptate possimus porro molestias architecto!";
+        $juego5->precio = 15;
+        $juego5->imagen = "minecraft.png";
+        $juego5->user_id = 2;
         $juego5->save();
 
         $juego6 = new juegos();
