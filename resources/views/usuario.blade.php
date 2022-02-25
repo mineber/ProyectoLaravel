@@ -1,6 +1,11 @@
 @extends('layouts.plantillaJuegos')
 <script src="https://cdn.tailwindcss.com"></script>
 @section('title', 'juegos')
+<style>
+    footer{
+        position: fixed!important;
+    }
+</style>
 @section('content')
 
 <h1 class="titulo-juegos">Mis juegos en venta - <a href="{{route('subirjuego')}}" class="caja CC">Vender juego</a></h1>

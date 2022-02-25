@@ -39,8 +39,6 @@ class Usuario extends Controller
         $juego->user_id = $_SESSION['id_user'];
         $juego->save();
 
-
-
         return redirect('');
 
         

@@ -34,7 +34,7 @@ body {
 
 header {
     padding: 1.5rem 8rem 1.5rem 8rem;
-    width: 100%;
+    width: 100vw;
     text-decoration: none;
     background-color: black;
     /*flex styles*/
@@ -204,9 +204,10 @@ h2 {
 /*FOOTER*/
 
 footer {
+    position: relative;
     bottom: 0;
     padding: 1.5rem 8rem 1.5rem 8rem;
-    width: calc(100vw - 0.7rem);
+    width: 100vw;
     height: auto;
     text-decoration: none;
     background-color: black;
