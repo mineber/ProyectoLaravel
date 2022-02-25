@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('cod_carrito');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('juego_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('user_id')->references('cod_juego')->on('juegos');
             $table->timestamps();
         });

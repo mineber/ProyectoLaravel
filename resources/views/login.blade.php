@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="hero"> 
-    <form action="{{route('login')}}" method="post" class="formulario">
+    <form action="{{route('login.n')}}" method="post" class="formulario">
         @csrf
         <h2>Login</h2>
         <label for="nombre_suario">Nombre de usuario: </label>

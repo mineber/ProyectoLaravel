@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $user->name ="Antonio";
         $user->fecha_nac = "11/05/2002";
         $user->direccion = "Villa patata";
+        $user->mail = "mineber1996@gmail.com";
         $user->telefono = 633163586;
         $user->contraseña = "soyadmin";
         $user->save();
@@ -40,6 +41,7 @@ class DatabaseSeeder extends Seeder
         $user2->name ="Álvaro";
         $user2->fecha_nac = "11/05/2002";
         $user2->direccion = "Villa patata";
+        $user2->mail = "y@gmail.com";
         $user2->telefono = 642518269;
         $user2->contraseña = "soyadmin";
         $user2->save();
@@ -59,6 +61,7 @@ class DatabaseSeeder extends Seeder
         $user3->name ="Pepa";
         $user3->fecha_nac = "11/05/2002";
         $user3->direccion = "Villa patata";
+        $user3->mail = "e@gmail.com";
         $user3->telefono = 633163585;
         $user3->contraseña = "nosoyadmin";
         $user3->save();

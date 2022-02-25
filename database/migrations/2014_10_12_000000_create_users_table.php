@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('fecha_nac');
             $table->string('direccion');
+            $table->string('mail');
             $table->integer('telefono');
             $table->string('contraseña');
             $table->timestamps();

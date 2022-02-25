@@ -21,7 +21,7 @@
         </div>
             @if (isset($_SESSION['usuario']))
             <div class="banner-right">
-            <a href="{{route('login')}}" class="caja IS">{{$_SESSION['usuario']}}</a>
+            <a href="{{route('user')}}" class="caja IS">{{$_SESSION['usuario']}}</a>
             <a href="{{route('cs')}}" class="caja IS">Logout</a>
             <a href="#" class="caja"><i class='bx bxs-cart'></i></a> 
         </div>

@@ -6,7 +6,8 @@
 <h1>REGÍSTRO DE USUARIOS</h1>
 
 <div class="col-sm-6 col-md-4">
-    <form action="#">
+    <form action="{{route('register.n')}}" method="POST">
+    @csrf
 
         <label for="nameUser" class="form-label">Nombre usuario:</label>
         <input type="text" class="form-control" name="nameUser" id="nameUser" required>
@@ -22,6 +23,12 @@
 
         <label for="direccion" class="form-label">Direccion:</label>
         <input type="text" class="form-control" name="direccion" id="direccion" required>
+
+        <label for="direccion" class="form-label">Telefono:</label>
+        <input type="number" class="form-control" name="telefono" id="telefono" required>
+
+        <label for="direccion" class="form-label">Fecha nacimiento:</label>
+        <input type="date" class="form-control" name="fecha_nac" id="fecha_nac" required>
 
         <div class="mt-3 text-end">
             <input type="submit" class="btn btn-dark" value="Enviar">

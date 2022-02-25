@@ -25,23 +25,25 @@ class LoginController extends Controller
             return redirect('login');
         } else {
             session_start();
-            $datoss = strtoupper($datos->nombre_usuario[0]).''.strtolower(substr($datos->nombre_usuario, 1));
-            $_SESSION['usuario'] = $datoss;
+            // $datoss = strtoupper($datos->nombre_usuario[0]).''.strtolower(substr($datos->nombre_usuario, 1));
+            $_SESSION['usuario'] = $user->nombre_usuario;
+            $_SESSION['id_user'] = $user->id;
             setcookie('nombre_usuario', $user->nombre_usuario, 100*24*3600);
             return redirect('');
         }
     }
-    public function register(request $datos){
+    public function registro(request $datos){
         $user = new users;
-        $user->nombre_usuario = $datos->nombre_usuario;
+        $user->nombre_usuario = $datos->nameUser;
         $user->name = $datos->name;
         $user->fecha_nac = $datos->fecha_nac;
         $user->direccion = $datos->direccion;
+        $user->mail = $datos->direccion;
         $user->telefono = $datos->telefono;
-        $user->contraseña = $datos->contraseña;
+        $user->contraseña = $datos->passw;
         $user->save();
         
-            return redirect('')->with("echo '<script language='javascript'>alert('Cuenta registrada, inicia sesión');</script>';");
+            return redirect('');
         
     }
 }
