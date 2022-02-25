@@ -192,7 +192,7 @@ h2 {
 footer {
     bottom: 0;
     padding: 1.5rem 8rem 1.5rem 8rem;
-    width: 100%;
+    width: calc(100vw - 0.7rem);
     height: auto;
     text-decoration: none;
     background-color: black;

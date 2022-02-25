@@ -132,7 +132,7 @@ footer {
     position: fixed;
     bottom: 0;
     padding: 0 8rem 0 8rem;
-    width: 100%;
+    width: calc(100vw - 0.7rem);
     height: 10vh;
     text-decoration: none;
     background-color: black;
