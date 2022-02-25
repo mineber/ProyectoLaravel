@@ -13,7 +13,7 @@
 <body>
     <header>
     <div class="banner-left">
-            <a href="{{route('inicio')}}" class="caja">Página de inicio</a>
+            <a href="{{route('inicio')}}" class="caja">Inicio</a>
             {{-- <a href="#" class="caja">Videojuegos</a>
             <a href="#" class="caja">Plataformas</a> --}}
             <a href="{{route('plataforma','Nintendo')}}" class="caja">Nintendo</a>
@@ -24,13 +24,13 @@
         @if (isset($_SESSION['usuario']))
         <div class="banner-right">
             <a href="{{route('login')}}" class="caja IS">{{$_SESSION['usuario']}}</a>
-            <a href="{{route('cs')}}" class="caja IS">Cerrar Sesión</a>
-            <a href="#" class="caja CC">Carro</a>            
+            <a href="{{route('cs')}}" class="caja IS">Logout</a>
+            <a href="#" class="caja"><i class='bx bxs-cart'></i></a>            
         </div>
             @else
         <div class="banner-right">
-            <a href="{{route('login')}}" class="caja IS">Inicia sesión</a>
-            <a href="#" class="caja CC">Crear cuenta</a>            
+            <a href="{{route('login')}}" class="caja IS">Login</a>
+            <a href="#" class="caja CC">Registrarse</a>            
         </div>
             @endif
     </header>

@@ -63,6 +63,20 @@ header {
     box-shadow: 0 0 20px rgb(245, 255, 152);
 }
 
+.banner-left {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-right {
+    display: flex;
+    justify-content: center;
+}
+
+.bxs-cart {
+    font-size: 1.5rem;
+}
+
 .menu-desplegable ul {
     display: none;
 }
