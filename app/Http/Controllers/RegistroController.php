@@ -7,10 +7,9 @@ use Illuminate\Http\Request;
 
 class RegistroController extends Controller
 {
-    public function create()
+    public function index()
     {
         return view('registro');
-       
     } 
     public function store(){
         $user = users::create(request(['nombre_usuario', 'name', "fecha_nac", 'direccion', 'telefono','contraseña']));
