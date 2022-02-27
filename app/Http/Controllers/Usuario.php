@@ -16,16 +16,12 @@ class Usuario extends Controller
         
         //compact manda la variable juegos
         return view('usuario', compact('juegos'), compact('users'));
-
         
     } 
     public function subirindex()
     {
-        
         session_start();
         return view('subirjuego');
-
-        
     } 
     public function subir(request $datos)
     {
@@ -40,7 +36,6 @@ class Usuario extends Controller
         $juego->save();
 
         return redirect('');
-
-        
+    
     } 
 }

@@ -17,14 +17,14 @@ class JuegosController extends Controller
         //compact manda la variable juegos
         return view('inicio', compact('juegos'), compact('users'));
     }
-    public function Nintendo(){
-        session_start();
-        $juegos = ModelsJuegos::where(strtoupper('plataforma'), '=', strtoupper("Nintendo"))->simplePaginate(6);
-        $users = users::all();
+    // public function Nintendo(){
+    //     session_start();
+    //     $juegos = ModelsJuegos::where(strtoupper('plataforma'), '=', strtoupper("Nintendo"))->simplePaginate(6);
+    //     $users = users::all();
         
-        //compact manda la variable juegos
-        return view('inicio', compact('juegos'), compact('users'));
-    }
+    //     //compact manda la variable juegos
+    //     return view('inicio', compact('juegos'), compact('users'));
+    // }
     public function create(){
         return "crear";
     }

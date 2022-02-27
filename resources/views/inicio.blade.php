@@ -17,7 +17,7 @@
                     @endforeach</p>
                     {{substr($juego->descripcion, 0, 20)}}
                     <p>Precio: {{$juego->precio}} €</p>
-                    <a href="#" class="boton-comprar">Añadir al carrito</a>
+                    <a href="" class="boton-comprar">Añadir al carrito</a>
                 </div>
             </div>
             @endforeach

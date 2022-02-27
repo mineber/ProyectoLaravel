@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarritosController;
 use App\Http\Controllers\JuegosController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegistroController;
@@ -30,3 +31,4 @@ Route::get('user', [Usuario::class, 'index'])->name('user');
 Route::get('subirindex', [Usuario::class, 'subirindex'])->name('subirjuego');
 Route::post('subir', [Usuario::class, 'subir'])->name('subir');
 Route::get('plataforma/{nombre_plataforma}', [PlataformaController::class, 'index'])->name('plataforma');
+Route::get('carrito', [CarritosController::class, 'index'])->name('carrito');

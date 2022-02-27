@@ -2,9 +2,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 @section('title', 'juegos')
 <style>
-    footer{
-        position: fixed!important;
-    }
+
 </style>
 @section('content')
 

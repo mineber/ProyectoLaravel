@@ -23,7 +23,7 @@
         <div class="banner-right">
             <a href="{{route('user')}}" class="caja IS">{{$_SESSION['usuario']}}</a>
             <a href="{{route('cs')}}" class="caja IS">Logout</a>
-            <a href="#" class="caja"><i class='bx bxs-cart'></i></a>            
+            <a href="{{route('carrito')}}" class="caja"><i class='bx bxs-cart'></i></a>            
         </div>
             @else
         <div class="banner-right">

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('carrito', function(Blueprint $table){
+        Schema::create('carritos', function(Blueprint $table){
             $table->increments('cod_carrito');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('juego_id');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carrito');
+        Schema::dropIfExists('carritos');
     }
 };

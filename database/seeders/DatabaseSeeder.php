@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\carritos;
 use App\Models\juegos;
 use App\Models\users;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -16,7 +17,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        
+
+        $carrito = new carritos();
+        $carrito->cod_carrito=1;
+        $carrito->user_id=2;
+        $carrito->juego_id=2;
+
+
         $user = new users();
         $user->nombre_usuario= "Mineber";
         $user->name ="Antonio";
