@@ -13,7 +13,13 @@
         <input type="text" class="form-control" name="nombre_juego" id="nombre_juego" required>
 
         <label for="plataforma" class="form-label">Plataforma:</label>
-        <input type="text" class="form-control" name="plataforma" id="plataforma" required>
+        <select name="plataforma" id="plataforma" required class="form-control">
+            <option value="Nintendo">Nintendo</option>
+            <option value="Playstation">Playstation</option>
+            <option value="XBOX">XBOX</option>
+            <option value="PC">PC</option>
+        </select>
+        <!-- <input type="text" class="form-control" name="plataforma" id="plataforma" required> -->
 
         <label for="descripcion" class="form-label">Descripcion:</label>
         <input type="text" class="form-control" name="descripcion" id="descripcion" required>
