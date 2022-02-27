@@ -31,7 +31,14 @@ class Usuario extends Controller
         $juego->plataforma = $datos->plataforma;
         $juego->descripcion = $datos->descripcion;
         $juego->precio = $datos->precio;
-        $juego->imagen = $datos->imagen;
+        // $juego->imagen = $datos->imagen;
+        if ($datos->hasFile('imagen')){
+            $file = $datos->file('imagen');
+            $destino = "img/";
+            $fileName = time() . '-' . $file->getClientOriginalName();
+            $subidaImagen = $datos->file('imagen')->move($destino, $fileName);
+            $juego->imagen = $fileName;
+        }
         $juego->user_id = $_SESSION['id_user'];
         $juego->save();
 
