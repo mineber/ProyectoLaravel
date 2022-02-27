@@ -18,12 +18,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        $carrito = new carritos();
-        $carrito->cod_carrito=1;
-        $carrito->user_id=2;
-        $carrito->juego_id=2;
-
-
         $user = new users();
         $user->nombre_usuario= "Mineber";
         $user->name ="Antonio";
@@ -234,5 +228,11 @@ class DatabaseSeeder extends Seeder
         $juego11->imagen = "pokemonluna.png";
         $juego11->user_id = 1;
         $juego11->save();
+        
+        $carrito = new carritos();
+        $carrito->user_id=1;
+        $carrito->juego_id=2;
+        $carrito->save();
+
     }
 }

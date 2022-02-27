@@ -32,3 +32,6 @@ Route::get('subirindex', [Usuario::class, 'subirindex'])->name('subirjuego');
 Route::post('subir', [Usuario::class, 'subir'])->name('subir');
 Route::get('plataforma/{nombre_plataforma}', [PlataformaController::class, 'index'])->name('plataforma');
 Route::get('carrito', [CarritosController::class, 'index'])->name('carrito');
+Route::post('aniadircarrito', [CarritosController::class, 'aniadircarrito'])->name('aniadircarrito');
+Route::delete('borrarcarrito', [CarritosController::class, 'borrarcarrito'])->name('borrarcarrito');
+Route::delete('borrarjuego', [JuegosController::class, 'borrarjuego'])->name('borrarjuego');

@@ -17,7 +17,11 @@
                     @endforeach</p>
                     {{substr($juego->descripcion, 0, 20)}}
                     <p>Precio: {{$juego->precio}} €</p>
-                    <a href="" class="boton-comprar">Añadir al carrito</a>
+                    <form action="{{route('aniadircarrito')}}" method="post">
+                    @csrf
+                        <input type="hidden" name="id_juego" value="{{$juego->cod_juego}}">
+                        <input class="boton-comprar" type="submit" value="Añadir al carrito">
+                    </form>
                 </div>
             </div>
             @endforeach

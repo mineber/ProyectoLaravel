@@ -11,25 +11,56 @@ class CarritosController extends Controller
 {
     public function index(){
         session_start();
-        $carrito = ModelsCarritos::simplePaginate(6);
+        $carrito = ModelsCarritos::where('user_id', '=', $_SESSION['id_user'])->simplePaginate(6);
         $juegos = ModelsJuegos::all();
-        
+        $users = users::where('user_id', '=', $_SESSION['id_user']);
         //compact manda la variable juegos
-        return view('carrito', compact('carrito'), compact('juegos'));
+        $_SESSION['total']=0;
+        foreach ($carrito as $key => $value) {
+            foreach ($juegos as $key => $value2) {
+                if ($value->juego_id==$value2->cod_juego) {
+                    $_SESSION['total']+= $value2->precio;
+                }
+            }
+            
+        }
+        return view('carrito', compact('carrito'), compact('juegos'), compact('users'));
     }
     public function juegosUser(){
         session_start();
         //coge carrito donde user_id == user_id logueado
         $carrito = ModelsCarritos::where(strtoupper('user_id'), '=', strtoupper($_SESSION['usuario']))->simplePaginate(6);
         $users = users::all();
+        $juegos = ModelsJuegos::all();
         
         //compact manda la variable juegos
         return view('carrito', compact('carrito'), compact('juegos'));
     }
-    public function create(){
-        return "crear";
+    public function aniadircarrito(request $datos){
+        session_start();
+
+        $juegocarrito = new ModelsCarritos();
+        $juegocarrito->user_id = $_SESSION['id_user'];
+        $juegocarrito->juego_id = $datos->id_juego;
+        $juegocarrito->save();
+        $carrito = ModelsCarritos::where('user_id', '=', $_SESSION['id_user'])->simplepaginate(6);
+        $_SESSION['carrito'] = 0;
+        foreach ($carrito as $key => $value) {
+            $_SESSION['carrito']+=1;
+        }
+
+        return redirect('');
     }
-    public function show(){
-        return "show";
+    public function borrarcarrito(request $datos){
+        session_start();
+
+        $juegocarrito = ModelsCarritos::where('cod_carrito', '=', $datos->cod_carrito)->delete();
+        
+        $carrito = ModelsCarritos::where('user_id', '=', $_SESSION['id_user'])->simplepaginate(6);
+        $_SESSION['carrito'] = 0;
+        foreach ($carrito as $key => $value) {
+            $_SESSION['carrito']+=1;
+        }
+        return redirect(route('carrito'));
     }
 }

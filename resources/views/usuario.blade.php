@@ -20,6 +20,12 @@
                     @endforeach</p>
                     {{substr($juego->descripcion, 0, 20)}}
                     <p>Precio: {{$juego->precio}} €</p>
+                    <form action="{{route('borrarjuego')}}" method="post">
+                    @csrf
+                    @method('delete')
+                        <input type="hidden" name="id_juego" value="{{$juego->cod_juego}}">
+                        <input class="boton-comprar" type="submit" value="Dejar de vender">
+                    </form>
                 </div>
             </div>
             @endforeach

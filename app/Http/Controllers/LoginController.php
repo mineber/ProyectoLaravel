@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\users;
+use App\Models\carritos as ModelsCarritos;
 
 class LoginController extends Controller
 {
@@ -25,9 +26,15 @@ class LoginController extends Controller
             return redirect('login');
         } else {
             session_start();
+            
             // $datoss = strtoupper($datos->nombre_usuario[0]).''.strtolower(substr($datos->nombre_usuario, 1));
             $_SESSION['usuario'] = $user->nombre_usuario;
             $_SESSION['id_user'] = $user->id;
+            $carrito = ModelsCarritos::where('user_id', '=', $_SESSION['id_user'])->simplepaginate(6);
+            $_SESSION['carrito'] = 0;
+            foreach ($carrito as $key => $value) {
+                $_SESSION['carrito']+=1;
+            }
             setcookie('nombre_usuario', $user->nombre_usuario, 100*24*3600);
             return redirect('');
         }
@@ -43,7 +50,7 @@ class LoginController extends Controller
         $user->contraseña = $datos->passw;
         $user->save();
         
-            return redirect('');
+         return redirect('');
         
     }
 }
