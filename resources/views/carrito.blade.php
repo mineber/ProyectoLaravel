@@ -2,8 +2,12 @@
 <script src="https://cdn.tailwindcss.com"></script>
 @section('title', 'carrito')
 @section('content')
-
+@if($_SESSION['carrito'] == 0)
+    <h1 class="titulo-juegos">No hay productos en el carrito</h1>
+    
+@else
 <h1 class="titulo-juegos">CARRITO - {{$_SESSION['carrito']}} artículo/s, total {{$_SESSION['total']}}€ <a href="{{route('pedido')}}" class="caja CC">Hacer pedido</a></h1>
+@endif
 <div class="div-juegos"> 
             <!--Intentando que muestre los id de los juegos quiero morirme-->
             @foreach($carrito as $carritoJuegos)

@@ -38,7 +38,8 @@ class CarritosController extends Controller
     }
     public function aniadircarrito(request $datos){
         session_start();
-
+        $cc = ModelsCarritos::where('juego_id', '=', $datos->id_juego)->simplepaginate(6);
+        if($cc != null){
         $juegocarrito = new ModelsCarritos();
         $juegocarrito->user_id = $_SESSION['id_user'];
         $juegocarrito->juego_id = $datos->id_juego;
@@ -48,7 +49,7 @@ class CarritosController extends Controller
         foreach ($carrito as $key => $value) {
             $_SESSION['carrito']+=1;
         }
-
+    }
         return redirect('');
     }
     public function borrarcarrito(request $datos){

@@ -11,7 +11,7 @@ class Usuario extends Controller
     public function index()
     {
         session_start();
-        $juegos = ModelsJuegos::where('user_id', '=', $_SESSION['id_user'])->simplePaginate(6);
+        $juegos = ModelsJuegos::where('user_id', '=', $_SESSION['id_user'])->simplePaginate(3);
         $users = users::all();
         
         //compact manda la variable juegos

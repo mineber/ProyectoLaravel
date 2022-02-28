@@ -1,4 +1,4 @@
-@extends('layouts.plantillaJuegos')
+@extends('layouts.plantillaCarritoUsuario')
 <script src="https://cdn.tailwindcss.com"></script>
 @section('title', 'juegos')
 <style>
