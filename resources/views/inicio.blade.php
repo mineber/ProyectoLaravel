@@ -9,14 +9,14 @@
             <div class="card-juego">
                 <img src="{{asset('img/'.$juego->imagen)}}" alt="">
                 <div class="cuerpo-card">
-                    <a href="">{{$juego->nombre_juego}}</a>
+                    <h4>{{$juego->nombre_juego}}</h4>
                     <p>Vendedor: @foreach($users as $user)
                         @if ($user->id == $juego->user_id)
                             {{$user->nombre_usuario}}
                         @endif
                     @endforeach</p>
                     {{substr($juego->descripcion, 0, 20)}}
-                    <p>Precio: {{$juego->precio}} €</p>
+                    <p>Precio: <span style="color: limegreen; font-size: 1.3rem; padding-left:0.1em">{{$juego->precio}}€</span></p>
                     <form action="{{route('aniadircarrito')}}" method="post">
                     @csrf
                         <input type="hidden" name="id_juego" value="{{$juego->cod_juego}}">

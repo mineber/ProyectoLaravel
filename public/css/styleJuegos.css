@@ -20,7 +20,7 @@ img {
 /*BODY*/
 
 body {
-    width: calc(100vw - 1.1rem);
+    width: 100vw;
     background-image: url(../img/fondo.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -95,7 +95,7 @@ header {
 
 main {
     height: auto;
-    width: 100%;
+    width: 100vw;
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -185,6 +185,11 @@ h2 {
     gap: 1rem;
 }
 
+.cuerpo-card h4 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
 .paginacion {
     margin: 1rem;
     width: 100%;
@@ -197,21 +202,26 @@ h2 {
     border-radius: 0.5em;
     padding: 0.5rem;
     text-align: center;
-    background-color: black;
-    transform: scale(1);
-    transition: 0.5s;
+    background-color: black!important;
+    transform: scale(1)!important;
+    transition: 0.5s!important;
 }
 
 .boton-comprar:hover {
-    transform: scale(1.1);
-    color: #f1c70c;
+    transform: scale(1.1)!important;
+    color: #f1c70c!important;
+}
+
+form,
+.boton-comprar {
+    text-align: center;
 }
 
 
 /*FOOTER*/
 
 footer {
-    position: relative;
+    position: static;
     bottom: 0;
     padding: 1.5rem 8rem 1.5rem 8rem;
     width: 100vw;
@@ -249,4 +259,20 @@ footer {
 .bigicon {
     font-size: 35px;
     color: #36A0FF;
+}
+
+
+/*RESPONSIVE*/
+
+
+/*Moviles y tablets*/
+
+@media screen and (max-width:768px) {
+    header {
+        flex-direction: column;
+    }
+    footer {
+        text-align: center;
+        flex-direction: column;
+    }
 }

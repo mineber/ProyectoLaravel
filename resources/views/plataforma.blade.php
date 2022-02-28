@@ -16,7 +16,7 @@
                         @endif
                     @endforeach</p>
                     {{substr($juego->descripcion, 0, 20)}}
-                    <p>Precio: {{$juego->precio}} €</p>
+                    <p>Precio: <span style="color: limegreen; font-size: 1.3rem; padding-left:0.1em">{{$juego->precio}}€</span></p>
                     <form action="{{route('aniadircarrito')}}" method="post">
                     @csrf
                         <input type="hidden" name="id_juego" value="{{$juego->cod_juego}}">

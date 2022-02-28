@@ -13,11 +13,10 @@
                 @foreach($juegos as $juego)
                         @if ($carritoJuegos->juego_id == $juego->cod_juego)
                         <img src="{{asset('img/'.$juego->imagen)}}" alt="">
-                        Juego: {{$juego->nombre_juego}}
-                       <p> Precio: {{$juego->precio}}€</p>
-                       <p> Descripción: {{$juego->descripcion}}</p>
-                       
-                    <form action="{{route('borrarcarrito')}}" method="post">
+                        <h4>Juego: {{$juego->nombre_juego}}</h4>
+                        <p>Precio: <span style="color: limegreen; font-size: 1.3rem; padding-left:0.1em">{{$juego->precio}}€</span></p>
+                        <p>Descripción: {{$juego->descripcion}}</p>
+                        <form action="{{route('borrarcarrito')}}" method="post">
                     @csrf
                     @method('delete')
                         <input type="hidden" name="cod_carrito" value="{{$carritoJuegos->cod_carrito}}">
