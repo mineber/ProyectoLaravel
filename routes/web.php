@@ -7,6 +7,9 @@ use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\PlataformaController;
 use App\Http\Controllers\Usuario;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PedidoController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +38,4 @@ Route::get('carrito', [CarritosController::class, 'index'])->name('carrito');
 Route::post('aniadircarrito', [CarritosController::class, 'aniadircarrito'])->name('aniadircarrito');
 Route::delete('borrarcarrito', [CarritosController::class, 'borrarcarrito'])->name('borrarcarrito');
 Route::delete('borrarjuego', [JuegosController::class, 'borrarjuego'])->name('borrarjuego');
+Route::get('pedido', [PedidoController::class, 'index'])->name('pedido');

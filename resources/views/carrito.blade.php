@@ -3,7 +3,7 @@
 @section('title', 'carrito')
 @section('content')
 
-<h1 class="titulo-juegos">CARRITO - {{$_SESSION['carrito']}} artículo/s, total {{$_SESSION['total']}}€ <a href="{{route('subirjuego')}}" class="caja CC">Comprar</a></h1>
+<h1 class="titulo-juegos">CARRITO - {{$_SESSION['carrito']}} artículo/s, total {{$_SESSION['total']}}€ <a href="{{route('pedido')}}" class="caja CC">Hacer pedido</a></h1>
 <div class="div-juegos"> 
             <!--Intentando que muestre los id de los juegos quiero morirme-->
             @foreach($carrito as $carritoJuegos)
