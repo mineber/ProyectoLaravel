@@ -41,7 +41,7 @@ header {
 .caja {
     text-decoration: none;
     width: 100%;
-    height: 100%;
+    height: auto;
     color: white;
     padding: 10px 10px;
 }
@@ -182,6 +182,25 @@ footer {
         flex-direction: column;
     }
     footer {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .banner-left {
+        text-align: center;
+        flex-direction: column;
+    }
+    .banner-right {
+        text-align: center;
+        flex-direction: column;
+    }
+    .footer-right {
+        text-align: center;
+        flex-direction: column;
+    }
+    .banner-left {
         text-align: center;
         flex-direction: column;
     }
