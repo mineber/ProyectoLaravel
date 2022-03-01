@@ -39,29 +39,35 @@ class CarritosController extends Controller
     public function aniadircarrito(request $datos){
         session_start();
         $cc = ModelsCarritos::where('juego_id', '=', $datos->id_juego)->simplepaginate(6);
-        if($cc != null){
         $juegocarrito = new ModelsCarritos();
-        $juegocarrito->user_id = $_SESSION['id_user'];
-        $juegocarrito->juego_id = $datos->id_juego;
-        $juegocarrito->save();
-        $carrito = ModelsCarritos::where('user_id', '=', $_SESSION['id_user'])->simplepaginate(6);
-        $_SESSION['carrito'] = 0;
-        foreach ($carrito as $key => $value) {
-            $_SESSION['carrito']+=1;
-        }
-    }
+        //para que no se repita en el carrito dos veces el mismo juego
+        if (ModelsCarritos::where('juego_id','=', $datos->id_juego)->where('user_id','=', $_SESSION['id_user'])->doesntExist()) {
+            $juegocarrito->user_id = $_SESSION['id_user'];
+            $juegocarrito->juego_id = $datos->id_juego;
+            $juegocarrito->save();
+            $carrito = ModelsCarritos::where('user_id', '=', $_SESSION['id_user'])->simplepaginate(6);
+            $_SESSION['carrito'] = 0;
+            foreach ($carrito as $key => $value) {
+                $_SESSION['carrito']+=1;
+            }
+        }    
+    
         return redirect('');
     }
     public function borrarcarrito(request $datos){
         session_start();
 
         $juegocarrito = ModelsCarritos::where('cod_carrito', '=', $datos->cod_carrito)->delete();
-        
+
         $carrito = ModelsCarritos::where('user_id', '=', $_SESSION['id_user'])->simplepaginate(6);
         $_SESSION['carrito'] = 0;
         foreach ($carrito as $key => $value) {
             $_SESSION['carrito']+=1;
         }
         return redirect(route('carrito'));
+    }
+
+    public function repetidos(request $datos){
+        session_start();
     }
 }
