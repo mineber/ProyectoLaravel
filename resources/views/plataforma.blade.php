@@ -19,8 +19,10 @@
                     <p>Precio: <span style="color: limegreen; font-size: 1.3rem; padding-left:0.1em">{{$juego->precio}}€</span></p>
                     <form action="{{route('aniadircarrito')}}" method="post">
                     @csrf
+                        @if (isset($_SESSION['usuario']))
                         <input type="hidden" name="id_juego" value="{{$juego->cod_juego}}">
                         <input class="boton-comprar" type="submit" value="Añadir al carrito">
+                        @endif
                     </form>
                 </div>
             </div>
