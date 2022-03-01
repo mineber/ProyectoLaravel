@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @if(isset($_SESSION['usuario']))
+    <link rel="stylesheet" href="{{asset('css/stylesFormJ.css')}}">
+    @else
     <link rel="stylesheet" href="{{asset('css/stylesForm.css')}}">
+    @endif
     <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     <link href="{{asset('icons/boxicons-2.1.1/css/boxicons.min.css')}}" rel='stylesheet'>
     <title>@yield('title')</title>
