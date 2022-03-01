@@ -45,7 +45,7 @@ class CarritosController extends Controller
             $juegocarrito->user_id = $_SESSION['id_user'];
             $juegocarrito->juego_id = $datos->id_juego;
             $juegocarrito->save();
-            $carrito = ModelsCarritos::where('user_id', '=', $_SESSION['id_user'])->simplepaginate(6);
+            $carrito = ModelsCarritos::where('user_id', '=', $_SESSION['id_user'])->get();
             $_SESSION['carrito'] = 0;
             foreach ($carrito as $key => $value) {
                 $_SESSION['carrito']+=1;

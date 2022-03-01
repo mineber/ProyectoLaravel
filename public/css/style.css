@@ -58,6 +58,7 @@ header {
 }
 
 .CC:hover {
+    cursor: pointer;
     background-color: #f1c70c;
     text-shadow: 0 0 5px white;
     box-shadow: 0 0 20px rgb(245, 255, 152);

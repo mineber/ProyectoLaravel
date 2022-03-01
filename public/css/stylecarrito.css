@@ -208,6 +208,7 @@ h2 {
 }
 
 .boton-comprar:hover {
+    cursor: pointer;
     transform: scale(1.1)!important;
     color: #f1c70c!important;
 }

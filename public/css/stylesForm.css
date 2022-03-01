@@ -214,6 +214,7 @@ h2 {
 }
 
 .boton-comprar:hover {
+    cursor: pointer;
     transform: scale(1.1);
     color: #f1c70c;
 }
